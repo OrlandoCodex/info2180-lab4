@@ -1,0 +1,37 @@
+.container {
+    background-color: #f0f0f0;
+    margin: 0 auto;
+    max-width: 960px;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+.heading {
+    display: flex;
+    background-color: #4d8ab5;
+    color: white;
+    font-weight: bold;
+    height: 75px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+input {
+    width: 85%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 2px #e7e7e7;
+}
+button{
+    background-color: #c72523;;
+    color: white;
+    height: 37px;
+    border-radius: 5px;
+    width: 6%
+
+}
+.resultHeading {
+    font-weight: bold;
+    color: #1e2639;
+}
