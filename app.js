@@ -12,22 +12,21 @@ const searchbtn = document.getElementById("searchbtn");
 searchbtn.addEventListener("click",btnfunction);
 function btnfunction(e){
     //e.preventDefault();
-    //const xhttp = new XMLHttpRequest();
+    const xhttp = new XMLHttpRequest();
     if(input.trim() == ""){
-        //xhttp.onload = function() {
+        xhttp.onload = function() {
             document.getElementById("result").innerHTML = this.responseText;
           
-          //xhttp.open("GET", "superheroes.php");
-         // xhttp.send();
+          xhttp.open("GET", "superheroes.php");
+          xhttp.send();
     }else{
-        /*xhttp.onload = function() {
+        xhttp.onload = function() {
             document.getElementById("result").innerHTML = this.responseText;
           }
           xhttp.open("POST", "superheroes.php");
           xhttp.send(input);
-        }*/
+        }
         
-    }
 }
 
 
