@@ -64,7 +64,21 @@ $superheroes = [
 ];
 
 ?>
-
+<?php
+    if(isset($_POST["superName"])):
+        $searchVal = filter_input(INPUT_POST, "superName", FILTER_SANITIZE_STRING);
+        foreach($superheroes as $superhero):
+            if(in_array($searchVal, $superhero)): 
+                $values = array_values($superhero); ?>
+                <h3><?= $values[1];?></h3>
+                <h4><?= $values[2];?></h4>
+                <p><?= $values[3];?></p>
+            
+            <?php
+            endif;
+        endforeach;
+    endif;
+?>
 <ul>
 <?php foreach ($superheroes as $superhero): ?>
   <li><?= $superhero['alias']; ?></li>
